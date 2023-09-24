@@ -1,12 +1,14 @@
-"""Module docstring"""
+"""Program gets user password above a minimum length and returns it as *"""
 
 
 def main():
+    """"""
     password = get_password()
     hide_password(password)
 
 
 def get_password():
+    """"""
     minimum_password_length = 8
     password = input("Enter a password: ")
     while len(password) < minimum_password_length:
@@ -15,6 +17,7 @@ def get_password():
     return password
 
 def hide_password(password):
+    """"""
     print('*' * len(password))
 
 
