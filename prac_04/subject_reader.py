@@ -12,6 +12,11 @@ def main():
     print("----------" * 13)  # simply add a line between data and words
     print_data(data)
 
+    subject_to_data = convert_data(data)
+    print(subject_to_data)
+    subject = input("What subject code: ")
+    print(f"{subject_to_data[subject[0]]} teaches {subject}")
+
 
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
@@ -35,6 +40,14 @@ def print_data(data):
     """print data as formatted string in plain english"""
     for i in data:
         print(f"{i[0]} is taught by {i[1]} and has {i[2]} students")
+
+
+def convert_data(data):
+    "turns list into dictionary so parts can be searched not individually compared"
+    subject_to_data = {}
+    for subject_data in data:
+        subject_to_data[subject_data[0]] = subject_data[1:]
+    return subject_to_data
 
 
 main()
