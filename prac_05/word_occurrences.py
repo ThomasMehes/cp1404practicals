@@ -15,5 +15,5 @@ for word in word_list:
         word_dictionary[word] = 1
 
 max_length = max(len(word) for word in list(word_dictionary))
-for word, count in word_dictionary.items():
+for word, count in sorted(word_dictionary.items()):
     print(f"{word:{max_length}} : {count:1}")
