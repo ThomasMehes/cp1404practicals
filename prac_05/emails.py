@@ -6,7 +6,7 @@ Actual: 70 minutes
 
 
 def main():
-    """program stores users' emails and names in a dictionary
+    """Program stores users' emails and names in a dictionary
     and continues to ask the user for their email until they enter a blank one."""
     email_storage = {}  # dictionary
     email = input("Enter your Email: ")
@@ -31,7 +31,7 @@ def main():
 
 
 def strip_email_address(input_string):
-    """Removes all characters after @ which is the email address"""
+    """Removes all characters after @ which is the email address."""
     index = input_string.find("@")
     if index != -1:
         return input_string[:index]
@@ -40,8 +40,8 @@ def strip_email_address(input_string):
 
 
 def extract_name(username_parts):
-    """Removes all unwanted characters so the name is the only thing preserved"""
-    characters_to_remove = ".,!?'*$#1234567890"
+    """Removes all unwanted characters so the name is the only thing preserved."""
+    characters_to_remove = ".,!?'*-_$#1234567890"
     name = " ".join(username_parts)
     name = "".join(char for char in name if char not in characters_to_remove)
     return name
