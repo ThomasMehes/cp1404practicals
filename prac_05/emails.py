@@ -8,10 +8,10 @@ Actual: 70 minutes
 def main():
     """program stores users' emails and names in a dictionary
     and continues to ask the user for their email until they enter a blank one."""
-    email_storage = {}
+    email_storage = {}  # dictionary
     email = input("Enter your Email: ")
 
-    while email != "":
+    while email != "":  # stops asking for new emails if they enter blank
         username = strip_email_address(email)
         username = username.split(".")
         name = extract_name(username).title()
@@ -22,7 +22,7 @@ def main():
         else:
             correct_name = input("Enter your name: ")
 
-        email_storage[correct_name] = email
+        email_storage[correct_name] = email  # store into dictionary
 
         email = input("Enter your Email: ")
 
