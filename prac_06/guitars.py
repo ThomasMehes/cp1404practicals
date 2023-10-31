@@ -8,7 +8,8 @@ from prac_06.guitar import Guitar
 
 
 def main():
-    """Continuously get inputs, to add more guitars, until user enters "". Then format print all"""
+    """Continuously get inputs, to add more guitars, until user enters "". Then format print all.
+    Could have included exception handling and function but wasn't asked for."""
     guitars = []
     print("My guitars!")
     while True:
