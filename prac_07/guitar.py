@@ -1,6 +1,6 @@
 """
 CP1404 Practical
-Classes for guitars.py program
+Classes for guitars.py program.
 """
 
 

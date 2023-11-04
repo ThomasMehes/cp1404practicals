@@ -1,7 +1,7 @@
 """
 CP1404 Practical
 Uses a list to store all guitars from .csv file and also stores the user's guitars and
-keeps inputting until they enter a blank name then writes back to .csv file.
+keeps inputting until they enter a blank name then writes back to .csv file..
 """
 
 import csv
