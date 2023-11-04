@@ -5,7 +5,7 @@ Classes for guitars.py program
 
 
 class Guitar:
-    """Methods including overloading operators (__lt__)"""
+    """Methods including overloading operators (__lt__)."""
 
     def __init__(self, name="", year=0, cost=0):
         """Initialise ..... """
