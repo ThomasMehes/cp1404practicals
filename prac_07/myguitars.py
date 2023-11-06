@@ -13,13 +13,7 @@ def main():
     """Reads .csv file, then gets inputs to add more guitars, until user enters "" and then write to .csv."""
     guitars = []
 
-    # Read .csv and append each line to guitars list
-    in_file = open('guitars.csv', 'r')  # File format is like: Name,Year,Cost
-    for line in in_file:
-        parts = line.strip().split(',')
-        guitar = Guitar(parts[0], int(parts[1]), float(parts[2]))
-        guitars.append(guitar)
-    in_file.close()
+    read_csv_file(guitars)
 
     # Continuously get inputs, to add more guitars, until user enters "".
     name = input("Name: ")
@@ -41,6 +35,16 @@ def main():
     out_file.close()
 
     print("Guitars saved to guitars.csv")
+
+
+def read_csv_file(guitars):
+    # Read .csv and append each line to guitars list
+    in_file = open('guitars.csv', 'r')  # File format is like: Name,Year,Cost
+    for line in in_file:
+        parts = line.strip().split(',')
+        guitar = Guitar(parts[0], int(parts[1]), float(parts[2]))
+        guitars.append(guitar)
+    in_file.close()
 
 
 if __name__ == '__main__':
