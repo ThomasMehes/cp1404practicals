@@ -1,16 +1,14 @@
-"""
-CP1404 Week 8 prac - KIVY program to convert miles to kilometres
-"""
-
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
+from kivy.properties import StringProperty
 
 MILES_TO_KM = 1.60934
 
 
 class ConvertMilesKmApp(App):
     """ConvertMilesKmApp is a Kivy App for converting miles to kilometres."""
+    output_text = StringProperty()
 
     def build(self):
         """Build the Kivy app from the kv file."""
@@ -23,13 +21,19 @@ class ConvertMilesKmApp(App):
         """Handle conversion, output result to label widget."""
         try:
             result = float(value) * MILES_TO_KM
-            self.root.ids.output_label.text = str(result)
+            self.output_text = str(result)
         except ValueError:
-            pass
+            self.output_text = '0.0'
 
     def handle_increment(self, increment):
         """Handle the up & down button increments of +/- 1."""
-        current = float(self.root.ids.input_miles.text)
+        current_text = self.root.ids.input_miles.text
+        if not current_text:
+            current_text = '0'
+        try:
+            current = float(current_text)
+        except ValueError:
+            current = 0.0
         self.handle_conversion(current + increment)
         self.root.ids.input_miles.text = str(current + increment)
 

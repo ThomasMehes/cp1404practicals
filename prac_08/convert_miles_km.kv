@@ -5,7 +5,7 @@ BoxLayout:
         TextInput:
             id: input_miles
             multiline: False
-            text: "60"
+            text: ""
             on_text: app.handle_conversion(input_miles.text)
         BoxLayout:
             orientation: 'vertical'
@@ -21,6 +21,6 @@ BoxLayout:
 #        text: 'Convert miles to km'
 #        on_press: app.handle_conversion(input_miles.text)
     Label:
-        text: '96.5604'
+        text: app.output_text
         id: output_label
         color: (1.0, 1.0, 0.0, 1.0)

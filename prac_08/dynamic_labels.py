@@ -1,21 +1,13 @@
-"""
-CP1404
-Very simple app that has a list of names (strings) and dynamically creates a separate Label for each one.
-"""
-
-
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.label import Label
 
+# List of names:
+names = ["Bob Brown", "Cat Cyan", "Oren Ochre", "Billy Bean"]
+
 
 class DynamicLabelsApp(App):
-    """Simple app that dynamically create labels based on content of dictionary"""
-
-    def __init__(self, **kwargs):
-        """Construct main app and dictionary"""
-        super().__init__(**kwargs)
-        self.number_to_name = {"1": "Bob Brown", "2": "Cat Cyan", "3": "Oren Ochre", "4": "Billy Bean"}
+    """Simple app that dynamically create labels based on content of list"""
 
     def build(self):
         """Build the Kivy GUI."""
@@ -25,8 +17,8 @@ class DynamicLabelsApp(App):
         return self.root
 
     def create_labels(self):
-        """create a label for each data entry and add to the "main" layout widget"""
-        for number, name in self.number_to_name.items():
+        """Create a label for each name in the list and add to the "main" layout widget"""
+        for name in names:
             temp_label = Label(text=f'{name}')
             self.root.ids.main.add_widget(temp_label)
 
