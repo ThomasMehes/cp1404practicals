@@ -1,3 +1,9 @@
+"""
+CP1404
+Band has Musicians the same way Musicians has a Guitar (Association).
+This concept was used to construct this Class Band from mirroring the Musicians Class.
+"""
+
 
 class Band:
     def __init__(self, name=""):

@@ -1,3 +1,9 @@
+"""
+CP1404
+Test program that shows the unreliable_car subclass of Car.
+"Reliability" is a float between 0 and 100, that represents the percentage chance that
+the drive method will actually drive the car.
+"""
 
 
 from prac_09.unreliable_car import UnreliableCar

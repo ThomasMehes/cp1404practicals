@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Unreliable Car class
+Fancy Taxi class
 """
 from prac_09.taxi import Taxi
 

@@ -1,4 +1,8 @@
-
+"""
+CP1404
+Demonstration program that shows a subclass of the taxi class.
+These Taxi's have effectively different price_per_km based on their fanciness
+"""
 
 from prac_09.silver_service_taxi import SilverServiceTaxi
 
